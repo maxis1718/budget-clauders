@@ -1,5 +1,5 @@
 ---
-name: setup
+name: bc-setup
 description: Use once to configure budget-clauders on a new machine. Installs caveman dependency and writes cost-effective orchestration rules to ~/.claude/CLAUDE.md.
 ---
 
@@ -39,10 +39,10 @@ Check if `## Budget Clauders` section already exists. If yes, skip. If no, appen
 - Root cause unknown + 3+ attempts → high
 - Task ambiguous → decompose first, then pick
 
-**Before opus:** invoke budget-clauders:cost-guard
-**Before subagent dispatch:** invoke budget-clauders:delegate
+**Before opus:** invoke bc-cost-guard
+**Before subagent dispatch:** invoke bc-delegate
 **Context hygiene:** files >8KB → delegate read+summarize to subagent, never in main session
-**Tools:** rg/fd/bat over grep/find/cat — invoke budget-clauders:tools for full table
+**Tools:** rg/fd/bat over grep/find/cat — invoke bc-tools for full table
 ```
 
 ### 3. Confirm

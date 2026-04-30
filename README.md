@@ -41,7 +41,7 @@ npx skills add maxis1718/budget-clauders -g -y
 Then in Claude Code, run once:
 
 ```
-/budget-clauders:setup
+/bc-setup
 ```
 
 That's it. Takes 30 seconds. Permanent.
@@ -99,7 +99,7 @@ npx skills add maxis1718/budget-clauders -g -y
 
 **Claude Code 內跑一次：**
 ```
-/budget-clauders:setup
+/bc-setup
 ```
 
 **之後自動生效：**

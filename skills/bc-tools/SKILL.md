@@ -1,5 +1,5 @@
 ---
-name: tools
+name: bc-tools
 description: Use when about to run grep, find, cat, sed, or awk. Faster modern alternatives exist that produce less noise and fewer tokens.
 ---
 

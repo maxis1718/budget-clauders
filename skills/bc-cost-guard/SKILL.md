@@ -1,5 +1,5 @@
 ---
-name: cost-guard
+name: bc-cost-guard
 description: Use when considering opus model, task complexity is unclear, or a decision carries high token cost. Do not proceed until checklist is complete.
 ---
 

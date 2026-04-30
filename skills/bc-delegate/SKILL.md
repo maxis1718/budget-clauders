@@ -1,5 +1,5 @@
 ---
-name: delegate
+name: bc-delegate
 description: Use when about to dispatch a subagent, Agent tool call, or background task involving file reads, research, or multi-step exploration.
 ---
 
