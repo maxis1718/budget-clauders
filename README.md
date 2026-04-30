@@ -35,7 +35,7 @@ Real usage stats (7-day comparison):
 ## Install
 
 ```bash
-npx skills add budget-clauders/budget-clauders -g -y
+npx skills add maxis1718/budget-clauders -g -y
 ```
 
 Then in Claude Code, run once:
@@ -94,7 +94,7 @@ Budget Clauders 讓 Claude Code 自動用對模型：能 haiku 解決的不給 s
 
 **安裝：**
 ```bash
-npx skills add budget-clauders/budget-clauders -g -y
+npx skills add maxis1718/budget-clauders -g -y
 ```
 
 **Claude Code 內跑一次：**
