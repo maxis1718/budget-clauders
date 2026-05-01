@@ -60,15 +60,33 @@ That's it. Takes 30 seconds. Permanent.
 - `cost-guard` — 3-question checklist before any opus call
 - `delegate` — structured subagent dispatch with model selection + return format
 - `tools` — CLI replacements (rg/fd/bat/sg/difft) for less noisy output
+- `work` — session orchestration intensity dial (`/work team` or `/work solo`)
 
 **Dependency (auto-installed):**
 - [`juliusbrussee/caveman`](https://github.com/juliusbrussee/caveman) — compresses Claude's output ~75%, fewer output tokens
 
 ---
 
+## Work mode
+
+Some sessions are obviously complex from the start — but the first prompt won't signal that to Claude. Use `/work team` to declare upfront:
+
+```
+/work team
+Migrate the capital allocation system from JSON state to SQLite
+```
+
+Claude enters full orchestrator mode: decompose → delegate → integrate. Main session handles planning only.
+
+`/work solo` reverses it — skip orchestration, direct execution.
+
+Default (no command): auto-assess per message.
+
+---
+
 ## How it works
 
-Skills are lazy-loaded. Claude reads the description of each skill and auto-invokes when conditions match — no manual `/invoke` needed. `setup` is the only one you ever run manually.
+Skills are lazy-loaded. Claude reads the description of each skill and auto-invokes when conditions match — no manual `/invoke` needed. `setup` and `work` are the only ones you ever run manually.
 
 The `~/.claude/CLAUDE.md` addition is minimal by design. Heavy content lives in skills, loaded on-demand. No bloating your baseline context.
 
@@ -107,6 +125,10 @@ npx skills add maxis1718/budget-clauders -g -y
 - 升 opus 前自動跑 checklist
 - Subagent 派發自動用正確格式
 - 大檔案自動 delegate，不污染主 session context
+
+**手動切換工作模式：**
+- `/work team` — 這 session 很重，強制 full orchestrator
+- `/work solo` — 快問快答，跳過 orchestration overhead
 
 ---
 
