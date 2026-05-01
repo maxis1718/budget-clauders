@@ -48,6 +48,15 @@ Research only / Write code: [pick one]
 | Large research / multi-file audit | Write to `tmp/research-YYYYMMDD-topic.md`, return path + 3 bullets |
 | Code output | Write to target file, return path + 1-line summary |
 
+## Dispatch announcement (required, every time)
+
+Before dispatching, print in the conversation's language. Header = "Dispatching N agents:" translated to conversation language, followed by one line per agent:
+
+- Non-opus: `[N] <model version> / <effort> — <one-line goal>`
+- Opus: `[N] opus 4.7 / high — <one-line goal> (reason: <why sonnet insufficient>)`
+
+Full model versions: `haiku 4.5`, `sonnet 4.6`, `opus 4.7`. Required for every dispatch, including single-agent.
+
 ## Parallel dispatch
 
 Independent tasks → same message, multiple Agent calls. Cap: 2 default, 3 max (haiku/sonnet only).
