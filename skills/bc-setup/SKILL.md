@@ -39,6 +39,11 @@ Check if `## Budget Clauders` section already exists. If yes, skip. If no, appen
 - Root cause unknown + 3+ attempts → high
 - Task ambiguous → decompose first, then pick
 
+**Session orchestration:**
+- `/work team` — force full orchestrator for this session (use when you know upfront it's complex)
+- `/work solo` — skip orchestration, direct execution
+- Default: auto-assess per message
+
 **Before opus:** invoke bc-cost-guard
 **Before subagent dispatch:** invoke bc-delegate
 **Context hygiene:** files >8KB → delegate read+summarize to subagent, never in main session
@@ -51,3 +56,4 @@ Tell user:
 - caveman status (installed / already present)
 - CLAUDE.md section added (or already present)
 - "Budget Clauders active. Behavior changes take effect next session."
+- "Tip: start complex sessions with `/work team` — forces full orchestrator before the first prompt signals complexity."
