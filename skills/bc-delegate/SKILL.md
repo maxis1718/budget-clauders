@@ -50,15 +50,12 @@ Research only / Write code: [pick one]
 
 ## Dispatch announcement (required, every time)
 
-Before dispatching, print in the conversation's language:
+Before dispatching, print in the conversation's language. Header = "Dispatching N agents:" translated to conversation language, followed by one line per agent:
 
-```
-[dispatch header — N agents]
-  [1] <model version> / <effort> — <one-line goal>
-  [2] opus 4.7 / high — <one-line goal> (reason: <why sonnet is insufficient>)
-```
+- Non-opus: `[N] <model version> / <effort> — <one-line goal>`
+- Opus: `[N] opus 4.7 / high — <one-line goal> (reason: <why sonnet insufficient>)`
 
-Full model versions: `haiku 4.5`, `sonnet 4.6`, `opus 4.7`. Single-agent dispatches also require this.
+Full model versions: `haiku 4.5`, `sonnet 4.6`, `opus 4.7`. Required for every dispatch, including single-agent.
 
 ## Parallel dispatch
 
