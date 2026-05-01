@@ -53,9 +53,9 @@ Research only / Write code: [pick one]
 Before dispatching, print in the conversation's language:
 
 ```
-[dispatch header — N agents] 
+[dispatch header — N agents]
   [1] <model version> / <effort> — <one-line goal>
-  [2] <model version> / <effort> — <one-line goal> [opus only: reason why sonnet insufficient]
+  [2] opus 4.7 / high — <one-line goal> (reason: <why sonnet is insufficient>)
 ```
 
 Full model versions: `haiku 4.5`, `sonnet 4.6`, `opus 4.7`. Single-agent dispatches also require this.
