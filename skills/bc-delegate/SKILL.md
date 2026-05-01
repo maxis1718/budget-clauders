@@ -48,6 +48,35 @@ Research only / Write code: [pick one]
 | Large research / multi-file audit | Write to `tmp/research-YYYYMMDD-topic.md`, return path + 3 bullets |
 | Code output | Write to target file, return path + 1-line summary |
 
+## Dispatch announcement (required, every time)
+
+Before dispatching, print in the conversation's language:
+
+**Chinese example:**
+```
+派出 2 個 agents：
+  [1] haiku 4.5 / low   — 在 src/routes/ grep API 路由定義
+  [2] sonnet 4.6 / med  — 讀取並摘要 capital-allocation state schema
+```
+
+**English example:**
+```
+Dispatching 2 agents:
+  [1] haiku 4.5 / low   — grep API route definitions in src/routes/
+  [2] sonnet 4.6 / med  — read + summarize capital-allocation state schema
+```
+
+**Rules:**
+- Match language to the conversation (中文對話 → 中文；English conversation → English)
+- Include full model version: `haiku 4.5`, `sonnet 4.6`, `opus 4.7`
+- opus 4.7 requires an explicit reason on the same line:
+
+```
+  [1] opus 4.7 / high   — 根因不明，已試 3 種方向無解，需跨檔架構判斷
+```
+
+- Print this before every dispatch, including single-agent dispatches
+
 ## Parallel dispatch
 
 Independent tasks → same message, multiple Agent calls. Cap: 2 default, 3 max (haiku/sonnet only).
