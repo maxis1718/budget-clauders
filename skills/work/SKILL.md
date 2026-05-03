@@ -34,7 +34,9 @@ Self-assess per message:
 
 ## On Activation
 
-State:
+For `team` mode: invoke `bc-delegate` skill first to load delegation protocol (model selection, announcement format, prompt template).
+
+Then state:
 ```
 WORK MODE: <team|solo>
 [2-3 bullet overrides active this session]
